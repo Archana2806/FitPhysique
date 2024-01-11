@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> Home Details </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navBar" class="navbar-black">
+        <a href="/Home.html"><img src="images/id_logo.png" class="logo"></a>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Services</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="listings.html">Explore</a></li>
+        </ul>
+        <a href="#" class="register-btn">Signup Now</a>
+        <i class="fas fa-bars" onclick="togglebtn()"></i>
+    </nav>
+    <div class="house-details">
+        <div class="house-title">
+            <h1>Mini Ham</h1>
+            <div class="row">
+                <div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <span>301 reviews</span>
+                </div>
+                <p>Location: Berhampur, Ganjam, Orissa</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-img-1"><img src="images/house-1.png"></div>
+            <div><img src="images/house-2.png"></div>
+            <div><img src="images/house-3.png"></div>
+            <div><img src="images/house-4.png"></div>
+            <div><img src="images/house-5.png"></div>
+        </div>
+        <div class="small-details">
+            <h2>Entire rental unit hosted by Baburao</h2>
+            <p>2 People &nbsp; &nbsp; 2 Bedrooms &nbsp; &nbsp; 2 Bathroom</p>
+            <h4>Rs. 500 /night</h4>
+        </div>
+        <hr class="line">
+        <form class="check-form">
+            <div>
+                <label>Check-in</label>
+                <input type="text" placeholder="Add Date">
+            </div>
+            <div>
+                <label>Check-out</label>
+                <input type="text" placeholder="Add Date">
+            </div>
+            <div class="guest-field">
+                <label>No. of People</label>
+                <input type="text" placeholder="1 or more...">
+            </div>
+            <button type="submit">Check Availability</button>
+        </form>
+    
+
+        <ul class="details-list">
+            <li>Entire Home
+                <span>you will have the entire flat for you.</span>
+            </li>
+            <li>Enhanced Clean
+                <span>The flat's cleaning process has been taken care of.</span>
+            </li>
+            <li>Great Location
+                <span>Can you believe it! less neighbours and a speactacular view of mountains.</span>
+            </li>
+        </ul>
+
+        <hr class="line">
+        <p class="home-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, laboriosam facilis at minima tempora aliquid in, pariatur accusamus, fugit ut itaque temporibus. Ratione dolorem consequatur inventore quam sequi. Error, dolores.</p>
+        <hr class="line">
+        <div class="map">
+            <h3>Location on Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3773.212814427389!2d84.3647476!3d18.9662065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3d1b48041dda45%3A0x465a2ccdba63d3ac!2sMahendragiri%20Hill%20top!5e0!3m2!1sen!2sin!4v1696241999302!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <b>Berhampur, Ganjam , Odisha</b>
+            <p>It's like a home in nature</p>
+        </div>
+        <hr class="line">
+
+        <div class="host">
+            <img src="images/user 2.jpg">
+            <div>
+                <h1>Hosted by Baburao</h1>
+                <p><span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </span>&nbsp; &nbsp; 150 Reviews &nbsp; &nbsp; Response rate 100% &nbsp; &nbsp; Response time: 3 mins</p>
+            </div>
+        </div>
+        <a href="#" class="contact-host">Contact Baburao</a>
+    </div>
+    <div class="container">
+        <div class="footer">
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+            <hr>
+            <p>Made With memes, Group 3</p>
+        </div>
+    </div>
+
+    <script>
+        var navBar = document.getElementById("navBar");
+        function togglebtn(){
+            navBar.classList.toggle("hidemenu");
+        }
+    </script>
+</body>
+</html>

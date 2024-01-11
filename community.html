@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navBar" class="navbar-black">
+        <a href="Home.html"><img src="images/id_logo.png" class="logo"></a>
+        <ul class="nav-links">
+            <li><a href="listings.html">Services</a></li>
+            <li><a href="#" class="active">Community</a></li>
+            <li><a href="#">Explore</a></li>
+        </ul>
+        <a href="#" class="register-btn">Signup Now</a>
+        <i class="fas fa-bars" onclick="togglebtn()"></i>
+    </nav>
+
+    <div class="container">
+        <div class="hom">
+            <h3>Trick or Treat</h3>
+            <P>Explore your curiosity</P>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hom">
+            <h3>FAQ's</h3>
+            <P>Explore your curiosity</P>
+            <button class="accordion">Your question here</button>
+            <div class="panel">
+                <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Your question here</button>
+            <div class="panel">
+                <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Your question here</button>
+            <div class="panel">
+                <p>Lorem ipsum...</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <a href="https://twitter.com/"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+        <hr>
+        <p>Made With memes, Group 3</p>
+    </div>
+
+    <script>
+        var navBar = document.getElementById("navBar");
+        function togglebtn(){
+            navBar.classList.toggle("hidemenu");
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active1");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } else {
+                panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
