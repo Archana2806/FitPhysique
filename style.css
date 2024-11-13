@@ -6,10 +6,14 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+section {
+    margin-bottom: 4rem; /* Adjust the value as needed */
+}
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(images/bg2pic.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(assets/bgimg.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -52,41 +56,142 @@ nav{
 }
 .search-bar{
     background: #fff;
-    width: 70%;
+    width: fit-content;
     margin: 30px auto;
-    padding: 6px 10px 6px 30px;
+    padding: 6px 10px;
     border-radius: 50px;
 }
-.search-bar form{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.search-bar form input{
-    display: block;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-.search-bar form button{
+.search-bar button{
     background: #ff5361;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
     border: 0;
     outline: none;
     cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
 }
-.search-bar form button img{
-    width: 25%;
-    margin-top: 7px;
+
+
+/*---------------Abut --------------------*/
+.header__container {
+    padding-block: 10rem;
+    display: grid;
+  }
+  
+  .header__content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    line-height: 5rem;
+    color: #000000;
+  }
+  
+  .header__content h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    line-height: 3rem;
+    color: #ffffff;
+  }
+  
+  .header__content p {
+    margin-bottom: 2rem;
+    color: #e5e5e5;
+    text-align: justify;
+  }
+  
+  .about__header {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
-.location-input{
-    flex: 1;
-}
-.search-bar form label{
+  
+  .about__header .section__header {
+    font-size: 3rem;
+    text-align: left;
+    margin-right: 1rem; 
+  }
+  
+  .about__header .section__description {
+    max-width: 350px;
+    margin-left: 1rem;
+  }
+  
+  .about__grid {
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  .about__card h4 {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 1rem;
+    padding-top: 4rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    font-family: "Oswald", sans-serif;
+    color: rgb(84, 84, 84);
+  }
+  
+  .about__card h4::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 6rem;
+    line-height: 6rem;
+    color: rgb(116, 116, 115);
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  .about__card p {
+    color: #737373;
+    text-align: justify;
+    width: 300px;
 }
+  
+  .about__card:nth-child(1) h4::before {
+    content: "01";
+  }
+  
+  .about__card:nth-child(2) h4::before {
+    content: "02";
+  }
+  
+  .about__card:nth-child(3) h4::before {
+    content: "03";
+  }
+  
+  .about__card p {
+    color: #737373;
+  }
+
+  .section__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .section__header {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+    color: rgb(110, 110, 109);
+    text-align: center;
+  }
+  
+  .section__description {
+    color: #737373;
+  }
 
 /* ------------Exclusives---------- */
 .sub-title{
@@ -101,39 +206,28 @@ nav{
     grid-gap: 30px;
 }
 .exclusives div img{
-    width: 100%;
+    width: 250px;
+    height: 120px;
     border-radius: 10px;
+    object-fit: cover; 
 }
 .exclusives div{
     position: relative;
 }
 .exclusives div span{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+    bottom: 10px;
+    left: 10px;
+    transform: none;
+    text-align: left;
     color: #fff;
 }
- 
-/* -------------Trending Places-------- */
-.trending{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 30px;
-    margin-bottom: 30px;
-}
-.trending div img{
-    width: 100%;
-    border-radius: 10px;
-}
-.trending h3{
-    font-weight: 600;
-    margin-top: 10px;
-}
 
-/* ----------Call To Action---------- */
-.cta{
+/* ------------cta Exclusives---------- */
+.cta {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     margin: 80px 0;
     background-image: linear-gradient(to right, #3f2321, transparent), url(images/bg1pic.jpg);
     background-size: cover;
@@ -142,6 +236,7 @@ nav{
     padding: 5%;
     color: #fff;
 }
+
 .cta h3{
     font-size: 4vw;
     line-height: 5.3vw;
@@ -151,14 +246,215 @@ nav{
     font-size: 18px;
     margin: 10px 0;
 }
-.cta-btn{
-    background: #ff5361;
+
+.cta_text {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.cta_exclusives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    flex: 2;
+}
+
+.cta_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cta_item img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cta_item span {
+    margin-top: 10px;
+    color: #000;
+}
+
+.cta_item h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #000;
+}
+/* -------------Trending Places-------- */
+.workout-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+  
+  .workout-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.182);
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .card-image {
+    position: relative;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
     color: #fff;
-    text-decoration: none;
-    padding: 12px 3px;
-    border-radius: 8px;
-    margin-top: 20px;
-    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  
+  .card-info-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .level,
+  .duration {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-content h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .instructor {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+  }
+
+/* ----------Call To Action---------- */
+
+.plans__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.plans__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.plans__header .section__header {
+    font-size: 3rem;
+    text-align: left;
+    margin-right: 1rem;
+}
+
+.plans__header .section__description {
+    max-width: 350px;
+    margin-left: 1rem;
+}
+
+.plans__grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.plan__card {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 3rem; 
+    min-height: 400px;
+}
+
+.plan__card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+    color: rgb(242, 196, 13);
+    margin-bottom: 1rem;
+}
+
+.plan__card p {
+    color: #e5e5e5;
+    margin-bottom: 1rem; /* Add space between description and points */
+}
+
+.plan__card ul {
+    list-style-type: disc;
+    padding-left: 20px; 
+    color: #e5e5e5; 
+    text-align: left;
+}
+
+.plan__card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.choose-plan-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2c40d;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.choose-plan-btn:hover {
+    background-color: #e5b809;
 }
 
 /* -----------About-msg------------- */
@@ -330,287 +626,171 @@ nav.navbar-black .fa-bars{
 .navbar-black .active::after{
     background-color: #ff5361;
 }
-.list-container{
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: flex;
-    justify-content: space-between;
-}
-.left-col{
-    flex-basis: 70%;
-}
-.right-col{
-    flex-basis: 25%;
-}
-.left-col h1{
+
+.register-btn {
+    background-color: #f2c40d;
     color: #333;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-.house{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: fle
-    ;
-    padding: 30px 0;
-    border-top: 1px solid #ccc;
-}
-.house-img{
-    flex-basis: 40%;
-}
-.house-info{
-    flex-basis: 58%;
-    color: #555;
-}
-.house-img img{
-    width: 100%;
-    border-radius: 12px;
-}
-.house-info h3{
-    font-weight: 600;
-    color: #333;
-    font-size: 22px;
-    margin: 4px 0;
-}
-.house-info i{
-    color: #ff5361;
-    font-size: 18px;
-    margin: 10px 1px;
-}
-.house-price{
-    text-align: right;
-}
-.house-price h4{
-    font-size: 20px;
-}
-.house-price h4 span{
-    font-size: 16px;
-    font-weight: 500;
-}
-.sidebar{
-    border: 1px solid #999;
-    padding: 20px 30px;
-    margin-top: 30px;
-}
-.sidebar h2{
-    font-weight: 500;
-}
-.sidebar h3{
-    font-weight: 500;
-    margin: 20px 0 10px;
-}
-.filter{
-    display: flex;
-    align-items: center;
-    color: #555;
-    margin-bottom: 10px;
-}
-.filter p{
-    flex: 1;
-}
-.filter input{
-    margin-right: 15px;
-    cursor: pointer;
-}
-.sidebar-link{
-    text-align: right;
-    margin: 20px 0;
-}
-.sidebar-link a{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     text-decoration: none;
-}
-.pagination{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0;
-}
-.pagination img{
-    width: 15px;
-    margin: 10px 20px;
-}
-.right-arrow{
-    transform: rotate(180deg);
-}
-.pagination span{
-    margin: 10px 8px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.pagination .current{
-    background: #000;
-    color: #fff;
+    font-weight: bold;
 }
 
-/* -----------Listing Page for mobile----------- */
-@media only screen and (max-width: 700px){
-    .list-container{
-        margin-top: 150px;
-    }
-    .left-col, .right-col, .house-img, .house-info{
-        flex-basis: 100%;
-    }
-    .left-col h1{
-        font-size: 22px;
-    }
-    .house-info h3{
-        font-size: 18px;
-    }
-    .house-info i{
-        font-size: 16px;
-    }
-    .pagination span{
-        margin: 10px 2px;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 12px;
-    }
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
 }
 
-/* -----------House Details Page------------ */
-.house-details{
-    padding: 0 12%;
-}
-.house-title{
-    margin-top: 50px;
-}
-.house-title h1{
-    font-weight: 600;
-}
-.house-title .row{
+.product-detail {
     display: flex;
-    flex-wrap: wrap;
-    align-items:center;
-    margin: 10px 0;
+    gap: 2rem;
 }
-.house-title span{
-    margin: 0 20px;
+
+.gallery {
+    display: flex;
+    gap: 20px;
 }
-.house-title i{
-    color: #ff5361;
-    font-size: 14px;
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.gallery{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-areas: 'first first . .' 'first first . .';
-    margin: 20px 0;
-}
-.gallery div img{
-    width: 100%;
-    display: block;
+
+.gallery-column div img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
     border-radius: 10px;
 }
-.gallery-img-1{
-    grid-area: first;
+
+.gallery-main img {
+    width: 500px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 10px;
 }
-.small-details h2{
-    font-weight: 500;
+
+.product-info {
+    flex: 1;
+    margin-left: 5rem;
 }
-.small-details h4{
-    text-align: right;
-    font-size: 22px;
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
-.line{
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    width: 100%;
-    max-width: 800px;
-    margin: 20px 0 50px;
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1rem;
 }
-.check-form{
+
+.rating i {
+    color: #ff5361;
+}
+
+.rating span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.product-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.product-info h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.home-desc {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.check-form {
     margin: 30px 0;
     background: #fff;
     box-shadow: 0 0 30px rgba(0,0,0,0.3);
     border-radius: 8px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px 50px;
-}
-.check-form label{
-    display: block;
-}
-.check-form div{
+    flex-direction: column;
+    gap: 20px;
     padding: 20px;
 }
-.check-form input{
-    background: transparent;
-    border: 0;
-    outline: none;
+
+.form-row {
+    display: flex;
+    gap: 20px;
 }
-.check-form button{
+
+.form-group {
+    flex: 1;
+}
+
+.check-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.check-form input {
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.check-form .special-instructions {
+    margin-top: -10px; /* Adjust this value to move the field up */
+}
+
+.check-form button {
     background: #ff5361;
     border: 0;
     outline: none;
     color: #fff;
     padding: 18px;
-    width: 350px;
+    width: 100%;
     border-radius: 8px;
     font-size: 16px;
+    cursor: pointer;
 }
-.guest-field{
-    flex: 1;
+
+.check-form button:hover {
+    background: #e04a50;
 }
-.details-list{
-    list-style: none;
-    margin: 50px 0;
-}
-.details-list li{
-    margin-left: 50px;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: #555;
-}
-.details-list li span{
-    display: block;
-    font-weight: 400;
-    font-size: 16px;
-}
-.home-desc{
-    max-width: 700px;
-    margin-bottom: 50px;
-}
-.map{
-    margin: 50px 0;
-}
-.map iframe{
-    width: 100%;
-    margin-bottom: 30px;
-}
-.map h3{
-    font-size: 26px;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
-.map b{
-    display: block;
-    margin-bottom: 16px;
-}
-.host{
+
+.host {
     display: flex;
     align-items: center;
 }
-.host img{
+
+.host img {
     width: 150px;
     border-radius: 25%;
     margin-right: 30px;
 }
-.host h2{
+
+.host h1 {
     margin-bottom: 10px;
     font-weight: 500;
 }
-.host i{
+
+.host i {
     color: #ff5361;
 }
-.contact-host{
+
+.contact-host {
     display: inline-block;
     margin: 40px 0 40px 120px;
     text-decoration: none;
@@ -619,6 +799,27 @@ nav.navbar-black .fa-bars{
     border: 1px solid #ff5361;
     border-radius: 8px;
 }
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer hr {
+    margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background: #444;
+}
+
 
 /* ---------Details for small screen-------- */
 @media only screen and (max-width: 700px){
@@ -671,7 +872,7 @@ nav.navbar-black .fa-bars{
 
 .hom{
     margin: 80px 0;
-    background-image: linear-gradient(to right, #151e3d, transparent), url(images/cnct.house.jpg);
+    background-image: linear-gradient(to right, #151e3d, transparent), url(assets/cnct.house.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 10px;
