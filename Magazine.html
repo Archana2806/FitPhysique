@@ -9,73 +9,138 @@
 </head>
 <body>
     <nav id="navBar" class="navbar-black">
-        <a href="Home.html"><img src="assets/id_logo.png" class="logo"></a>
+        <a href="Home.html"><img src="assets/logo.png" class="logo"></a>
         <ul class="nav-links">
-            <li><a href="listings.html">Services</a></li>
-            <li><a href="#" class="active">Community</a></li>
-            <li><a href="#">Explore</a></li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="#" class="active">Learn</a></li>
+            <li><a href="#">Profile</a></li>
         </ul>
         <a href="#" class="register-btn">Signup Now</a>
         <i class="fas fa-bars" onclick="togglebtn()"></i>
     </nav>
 
     <div class="container">
-        <div class="hom">
-            <h3>Trick or Treat</h3>
-            <P>Explore your curiosity</P>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="hom">
-            <h3>FAQ's</h3>
-            <P>Explore your curiosity</P>
-            <button class="accordion">Your question here</button>
-            <div class="panel">
-                <p>Lorem ipsum...</p>
+        <div class="hero-section">
+            <div class="hero-text">
+                <h1>Good Health starts <br/> with Good Knowledge</h1>
+                <p>From science-backed guidance to real-life inspiration, we have everything you need to live healthier & happier!</p>
+                <div class="search_bar">
+                    <input type="text" placeholder="Search articles, videos, podcasts...">
+                    <button type="button">Search</button>
+                </div>
             </div>
-
-            <button class="accordion">Your question here</button>
-            <div class="panel">
-                <p>Lorem ipsum...</p>
-            </div>
-
-            <button class="accordion">Your question here</button>
-            <div class="panel">
-                <p>Lorem ipsum...</p>
+            <div class="hero-image">
+                <img src="assets/magbg.jpg" alt="Hero Image">
             </div>
         </div>
+
+        <div class="categories">
+            <div class="category">
+                <a href="#"><img src="assets/article.webp" alt="Articles"></a>
+                <h5>Knowledge-filled articles</h5>
+            </div>
+            <div class="category">
+                <a href="#"><img src="assets/video.jpg" alt="Videos"></a>
+                <h5>Exercise videos</h5>
+            </div>
+            <div class="category">
+                <a href="#"><img src="assets/food.avif" alt="Podcasts"></a>
+                <h5>Healthy recipes</h5>
+            </div>
+            <div class="category">
+                <a href="#"><img src="assets/nutfood.webp" alt="Podcasts"></a>
+                <h5>Nutritional facts</h5>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Recent Posts</h2>
+            <div class="content-grid">
+                <div class="content-item">
+                    <img src="assets/art1.jpg" alt="Video 1">
+                    <h3>How ready are you?</h3>
+                    <p>Short description of the video content...</p>
+                </div>
+                <div class="content-item">
+                    <img src="assets/art2.jpeg" alt="Video 2">
+                    <h3>How to measure calories in food at home?</h3>
+                    <p>Short description of the video content...</p>
+                </div>
+                <div class="content-item">
+                    <img src="assets/art3.jpg" alt="Video 3">
+                    <h3>Why is excess salt not good for health?</h3>
+                    <p>Short description of the video content...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Featured Posts</h2>
+            <div class="content-grid featured-posts">
+                <div class="content-item">
+                    <img src="assets/art1.jpg" alt="Video 1">
+                    <div class="content-info">
+                        <h3>How ready are you?</h3>
+                        <p>Short description of the video content...</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <img src="assets/art2.jpeg" alt="Video 2">
+                    <div class="content-info">
+                        <h3>How to measure calories in food at home?</h3>
+                        <p>Short description of the video content...</p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <img src="assets/art3.jpg" alt="Video 3">
+                    <div class="content-info">
+                        <h3>Why is excess salt not good for health?</h3>
+                        <p>Short description of the video content...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="calculator-section">
+            <h2>Calculate Your Fitness Metrics</h2>
+            <p>Science-backed and created to help you better understand your current condition</p>
+            
+            <div class="calculator-grid">
+        
+                <!-- Macro Calculator -->
+                <div class="calculator-card">
+                    <img src="assets/macro.svg" alt="Macro Image" class="calculator-image">
+                    <div class="calculator-content">
+                        <h3 class="calculator-title">Macro Calculator</h3>
+                        <p class="calculator-description">Calculate your daily protein, carbs, and fats intake based on your goals.</p>
+                        <a href="#" class="calculate-button">Calculate Now</a>
+                    </div>
+                </div>
+        
+                <!-- Body Fat Calculator -->
+                <div class="calculator-card">
+                    <img src="assets/bodyfat.svg" alt="Body Fat Image" class="calculator-image">
+                    <div class="calculator-content">
+                        <h3 class="calculator-title">Body Fat Calculator</h3>
+                        <p class="calculator-description">Calculate your fat percentage based on body measurements.</p>
+                        <a href="#" class="calculate-button">Calculate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
     </div>
-
-
 
     <div class="footer">
         <a href="https://twitter.com/"><i class="fab fa-x-twitter"></i></a>
         <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
         <hr>
-        <p>Made With memes, Group 3</p>
+        <p>Fit Physiqye</p>
     </div>
+</div>
 
-    <script>
-        var navBar = document.getElementById("navBar");
-        function togglebtn(){
-            navBar.classList.toggle("hidemenu");
-        }
 
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active1");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                panel.style.display = "none";
-                } else {
-                panel.style.display = "block";
-                }
-            });
-        }
-    </script>
 </body>
 </html>
