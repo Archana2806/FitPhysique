@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Fit Physique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navBar" class="navbar-black">
+        <a href="Home.html"><img src="assets/logo.png" class="logo"></a>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="Magazine.html">Learn</a></li>
+            <li><a href="#" class="active">Profile</a></li>
+        </ul>
+        <a href="login.html" class="register-btn">Signup Now</a>
+        <i class="fas fa-bars" onclick="togglebtn()"></i>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <div class="dashboard-header">
+            <div class="user-profile">
+                <img src="assets/bgimg.jpg" alt="User Profile Picture">
+            </div>
+            <h2 class="date-title">Today</h2>
+            <div class="streak-info">
+                <p>1 DAY STREAK</p>
+            </div>
+        </div>
+
+
+        <!-- Dashboard Main Content -->
+        <div class="dashboard-content">
+            <!-- Calories Overview Section -->
+            <div class="card calories-overview">
+                <h3>Calories</h3>
+                <p>Remaining = Goal - Food + Exercise</p>
+                <div class="calories-value">
+                    <h1>2780</h1>
+                    <p>Remaining</p>
+                </div>
+                <div class="goal-details">
+                    <p>Base Goal</p>
+                    <p>2780</p>
+                </div>
+                <div class="food-details">
+                    <p>Food</p>
+                    <p>0</p>
+                </div>
+                <div class="exercise-details">
+                    <p>Exercise</p>
+                    <p>0</p>
+                </div>
+            </div>
+
+            <!-- Macros Overview Section -->
+            <div class="card macros-overview">
+                <h3>Macros</h3>
+                <div class="macros-breakdown">
+                    <div class="macro-item">
+                        <p>Carbohydrates</p>
+                        <h1>0</h1>
+                        <p>/348 g</p>
+                        <p>348 g left</p>
+                    </div>
+                    <div class="macro-item">
+                        <p>Fat</p>
+                        <h1>0</h1>
+                        <p>/93 g</p>
+                        <p>93 g left</p>
+                    </div>
+                    <div class="macro-item">
+                        <p>Protein</p>
+                        <h1>0</h1>
+                        <p>/139 g</p>
+                        <p>139 g left</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card low-carb-diet">
+                <h3>Low Carb Diet</h3>
+                <p>Details about low carb diet...</p>
+            </div>
+            <div class="card custom-nutrition">
+                <h3>Custom Nutrition</h3>
+                <p>Details about custom nutrition...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
